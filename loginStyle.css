@@ -1,0 +1,10 @@
+.aligned {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+#picture{
+   text-align:center;
+}
+

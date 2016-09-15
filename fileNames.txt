@@ -1,0 +1,61 @@
+List of file names:
+
+
+login.php (Used to log into the directory)
+
+
+forgotPassword.php (What the user sees if they click the forgot password button)
+
+
+sendForgotPassword.php (Script to send the email to the user using php's email script)
+	-Change the email and password used to community honor fund things
+	-relies on location of the file named: PHP mailer
+
+
+
+register.php (Used to create an account so the person can log in)
+
+
+
+processRegister.php (Determines if the person had already created an account and adds their Email, Name, and Password if they haven't added anything)
+
+
+databaseinfo.php (Includes the information to access the mySQL database)
+	-User name: chf
+	-password: wahoo
+	-database name: chfdirectory
+
+
+
+successfulUserLogin.php (The first page that all regular users see i.e. they aren't part of the Community Honor Fund Exec. Board)
+
+
+directory.html (HTML for showing the directory table)
+
+
+read.php (Used to display the information from the MySQL table to the directory.html)
+
+
+create.php (Shows the User a form to be able to add new clients to the directory)
+
+
+processCreate.php (Where the query to the MySQL database actually submits the information submitted by the user)
+
+
+moreInfo.php (What is inside this php file is what is displayed when you click the "More Information" button in the Window that pops up. KendoWindow is used to creaete the window that holds this content)
+	-Links to editMoreInfo.php when you click the "edit" button
+	-The text boxes cannot be editted by the user until one clicks the edit button as it's readonly textboxes
+
+
+editMoreInfo.php (Used to make each text box edittable by the user)
+	-Contains a form that lets the user edit the personal information of the given client
+	-Clicking the submit button leads to the form being processed
+
+
+processMoreInfo.php (Inserts the user's changes to the MySQL table for it to be permanently saved)
+
+
+update.php:
+
+
+
