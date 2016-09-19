@@ -41,6 +41,7 @@ if (isset($_SESSION['login'])) {
 
   <link rel="stylesheet" type="text/css" href="loginStyle.css"/>
 
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
 
@@ -63,28 +64,44 @@ if (isset($_SESSION['login'])) {
 <div id="picture">
 
  <img class="aligned" src="CHF_logo.png" alt="Community Honor Fund">
+ <br />  <br />
+
 
 </div>
 
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form action="processlogin.php" method="POST">
+					<input type="email" name="email" placeholder="Email">
+					<input type="password" name="password" placeholder="Password">
+					<input type="submit" name="submit" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="register.php">Register</a> - <a href="forgotPassword.php">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
 
  	<br />
- 	<form align="left" action="processlogin.php" method="POST">
-		<input type = "email" name = "email" placeholder='Email'>
+ 	<!-- <form align="left" action="processlogin.php" method="POST"> -->
+		<!-- <input type = "email" name = "email" placeholder='Email'> -->
 
-		<input type = "password" name = "password" placeholder='Password'>
+		<!-- <input type = "password" name = "password" placeholder='Password'> -->
 		
-		<input type = "submit" name = 'submit' value = "Login"> </form>
+		<!-- <input type = "submit" name = 'submit' value = "Login"> </form> -->
 	
-	<br /> </br>
+	<!-- <br /> </br> -->
 	
 
-<button type="button" onclick="location.href='forgotPassword.php';">Forgot Password</button>
+<!-- <button type="button" onclick="location.href='forgotPassword.php';">Forgot Password</button> -->
 
-<button type="button" onclick="location.href='register.php';">Create an Account</button>
+<!-- <button type="button" onclick="location.href='register.php';">Create an Account</button> -->
 
-<br />
+<!-- <br /> -->
 
-<br />
+<!-- <br /> -->
 
 
 <!-- <div class="sideToSide">

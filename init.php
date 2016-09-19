@@ -19,23 +19,23 @@
 
 //(DON'T UNCOMMENT THIS LINE: query to create the Client's addition information table in mysql
 
- 	$createClientsMore =
- 	$db->query(
- 	"CREATE TABLE clientmore (
- 	 gender VARCHAR(1000) DEFAULT '',
- 	 age VARCHAR(1000) DEFAULT '',
- 	 race VARCHAR(1000) DEFAULT '',
- 	 income VARCHAR(1000) DEFAULT '',
- 	 address VARCHAR(1000) DEFAULT '',
- 	 city VARCHAR(1000) DEFAULT '',
- 	 state VARCHAR(1000) DEFAULT '',
- 	 id int NOT NULL,
- 	 CONSTRAINT fk_id
-	    FOREIGN KEY (id)
-	    REFERENCES clientmain (id)
-	    ON DELETE CASCADE)
- 	 ")
- 	 or die("Your clientsmore table couldn't be created: " . $db->error);
+ 	// $createClientsMore =
+ 	// $db->query(
+ 	// "CREATE TABLE clientmore (
+ 	//  gender VARCHAR(1000) DEFAULT '',
+ 	//  age VARCHAR(1000) DEFAULT '',
+ 	//  race VARCHAR(1000) DEFAULT '',
+ 	//  income VARCHAR(1000) DEFAULT '',
+ 	//  address VARCHAR(1000) DEFAULT '',
+ 	//  city VARCHAR(1000) DEFAULT '',
+ 	//  state VARCHAR(1000) DEFAULT '',
+ 	//  id int NOT NULL,
+ 	//  CONSTRAINT fk_id
+	 //    FOREIGN KEY (id)
+	 //    REFERENCES clientmain (id)
+	 //    ON DELETE CASCADE)
+ 	//  ")
+ 	//  or die("Your clientsmore table couldn't be created: " . $db->error);
 
 
 

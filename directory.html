@@ -60,6 +60,41 @@ $.ajax({
 
 });
 
+    //what happens when you click the reset button
+    function resetSearch() {
+      //Ajax request to get the json data of the mysql results from read.php and display it on the table
+$.ajax({
+    url: 'read.php',
+    dataType: 'json',
+    success: function (response) {
+        var trHTML = "";
+        $.each(response, function (i, val) {
+            trHTML += "<tr><td>" + val.lastName + ", " + val.firstName + "</td><td>" + val.phone + "</td><td>" + val.email + "</td><td>" + val.workplace + "</td><td>" + val.chf1 + "</td><td>" + val.chf2 + "</td><td>" + val.lastMeeting + "</td><td>" + val.nextMeeting + "</td><td>" + val.lastPayment + "</td><td>" + val.nextPayment + "</td><td>" + val.principal + "</td><td>" + "<div class='btn-group'> <button id='personal-" + val.id + "' type='button' class='btn-md' onClick='personalClick(" + val.id + ")'>More Information</button> <button id='edit-" + val.id + "' type='button' class='btn-md' onClick='editClick(" + val.id + ")'>Edit</button> <button id='delete-" + val.id + "' type='button' class='btn-md' onClick='deleteClick(" + val.id + ")'>Delete</button></div> </td>" +  "</tr>";
+
+        });
+        ($("#table tbody")).html(trHTML); //changes the contents of the table body to add the html rows filled in with the data from the JSON object
+      },
+  error:function(exception){alert(exception)}
+});
+    }
+
+    function search(){
+      var searchID = $('#input').val();
+      $.ajax({
+    url: "search.php?searchInput=" + searchID,
+    dataType: 'json',
+    success: function (response) {
+        var trSEARCH = "";
+        $.each(response, function (i, val) {
+            trSEARCH += "<tr><td>" + val.lastName + ", " + val.firstName + "</td><td>" + val.phone + "</td><td>" + val.email + "</td><td>" + val.workplace + "</td><td>" + val.chf1 + "</td><td>" + val.chf2 + "</td><td>" + val.lastMeeting + "</td><td>" + val.nextMeeting + "</td><td>" + val.lastPayment + "</td><td>" + val.nextPayment + "</td><td>" + val.principal + "</td><td>" + "<div class='btn-group'> <button id='personal-" + val.id + "' type='button' class='btn-md' onClick='personalClick(" + val.id + ")'>More Information</button> <button id='edit-" + val.id + "' type='button' class='btn-md' onClick='editClick(" + val.id + ")'>Edit</button> <button id='delete-" + val.id + "' type='button' class='btn-md' onClick='deleteClick(" + val.id + ")'>Delete</button></div> </td>" +  "</tr>";
+
+        });
+        ($("#table tbody")).html(trSEARCH); //changes the contents of the table body to add the html rows filled in with the data from the JSON object
+      },
+  error:function(exception){alert(exception)}
+});
+    }
+
 
      function personalClick(id){ //function that handles when the "more information" button is clicked
 		$("#moreInfo").kendoWindow({
@@ -134,7 +169,7 @@ function createClick(){ //function that handles when the "Add Client" button is 
 		<td colspan="12">
 
 	<div id="buttonLeft">
-<input id="search" type="search"> <div class="btn-group"><button type="button">Search</button> <button type="button">Reset</button> </div> 
+<input id="input" type="search"> <div class="btn-group"><button type="button" onClick="search()">Search</button> <button type="button" onClick='resetSearch()'>Reset</button> </div> 
 	</div>
 
 	<div id="buttonRight">
@@ -196,6 +231,7 @@ function createClick(){ //function that handles when the "Add Client" button is 
 
 </table>
 </div>
+
 
 
 </body>
