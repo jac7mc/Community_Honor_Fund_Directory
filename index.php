@@ -200,7 +200,7 @@ function createClick(){ //function that handles when the "Add Client" button is 
 	<tbody>
 
 
-<tr>
+<!-- <tr>
  <td> Chiang, Jeffrey  </td> 
  <td> 888-888-8888 </td> 
  <td> something@yahoo.com </td>
@@ -219,7 +219,7 @@ function createClick(){ //function that handles when the "Add Client" button is 
 			  <button id="delete" type="button" class="btn-md">Delete</button>
 	</div>
 		 </td>
-  </tr>
+  </tr> -->
 
 
 
